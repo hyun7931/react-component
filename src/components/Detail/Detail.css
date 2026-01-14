@@ -1,0 +1,91 @@
+/* src/components/Detail/Detail.css */
+
+/* 텍스트 스타일 컴포넌트 */
+.st-text__title {
+  font-size: var(--st-font-title);
+  color: var(--st-text-main);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.st-text__subtitle {
+  font-size: var(--st-font-body);
+  color: var(--st-text-main);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.st-text__body {
+  font-size: var(--st-font-caption);
+  color: var(--st-text-sub);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* 기본 버튼 스타일 */
+.st-detail__confirm-button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: var(--st-radius-medium);
+  font-size: var(--st-font-body);
+  font-weight: 600;
+  transition: all 0.3s ease; /* 색상 변경 애니메이션 */
+  cursor: pointer;
+}
+/* 비활성화 상태 (회색) */
+.st-detail__confirm-button--disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* 활성화 상태 (파란색) */
+.st-detail__confirm-button--active {
+  background-color: blue;
+  color: white;
+}
+
+.st-detail__confirm-button--active:hover {
+  background-color: green;
+}
+
+/* 스크롤 뷰 높이 설정 (필수) */
+.st-detail__scroll-view {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  padding-right: 8px;
+}
+
+/* AI Badge 스타일 */
+.st-ai-badge-group {
+  background-color: var(--st-bg-gray);
+  border-radius: var(--st-radius-medium);
+  padding: 16px;
+  margin: 24px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.st-ai-badge-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.st-ai-badge-bullet {
+    min-width: 5px;
+    max-width: 5px;
+    height: 5px;
+    background-color: var(--st-text-muted);
+    border-radius: 50%;
+    margin-top: 9px;
+}
+
+.st-ai-badge-item .st-text__body {
+  margin-bottom: 0 !important; /*margin 제거*/
+}
