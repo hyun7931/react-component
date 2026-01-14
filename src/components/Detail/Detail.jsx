@@ -1,8 +1,7 @@
 // src/components/Detail/Detail.jsx
-import React from 'react';
 import React, { useState, useRef } from 'react'
-import { Title, Subtitle, Body } from './Text';
-import { BadgeGroup, BadgeItem } from './AiBadgeText';
+import { Title, Subtitle, Body } from './Text'
+import { BadgeGroup, BadgeItem } from './AiBadgeText'
 import './Detail.css'
 
 const Detail = ({ children, onConfirm }) => {
@@ -44,10 +43,10 @@ const Detail = ({ children, onConfirm }) => {
 }
 
 // 2. 하위 컴포넌트들을 Detail 객체에 할당
-Detail.Title = Title;
-Detail.Subtitle = Subtitle;
-Detail.Body = Body;
-Detail.BadgeGroup = BadgeGroup;
-Detail.BadgeItem = BadgeItem;
+Detail.Title = Title
+Detail.Subtitle = Subtitle
+Detail.Body = Body
+Detail.BadgeGroup = BadgeGroup
+Detail.BadgeItem = BadgeItem
 
 export default Detail
