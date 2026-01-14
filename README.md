@@ -5,7 +5,9 @@
 ## ✨ Key Features
 
 - **Compound Component 패턴**: 하위 컴포넌트를 조립하여 자유롭게 레이아웃을 구성할 수 있습니다.
+- **드롭다운 그룹 UI**: 약관을 그룹 단위로 접고 펼칠 수 있어 깔끔하게 표현할 수 있습니다.
 - **스크롤 감지 로직**: 사용자가 약관 본문을 끝까지 읽었을 때만 '확인' 버튼이 활성화됩니다.
+- **상세 약관 확인 기반 체크 활성화**: 사용자가 약관 상세 페이지에서 확인 버튼을 눌러야 해당 약관의 체크 상태가 활성화됩니다. 
 - **AI 요약 레이아웃**: 복잡한 약관을 한눈에 파악할 수 있는 AI 요약 전용 배지 및 텍스트 레이아웃을 제공합니다.
 - **디자인 커스터마이징**: CSS 변수(`--st-primary` 등)를 통해 브랜드 컬러를 쉽게 변경할 수 있습니다.
 
@@ -15,7 +17,74 @@
 npm install smart-terms-ui
 ```
 
-## 🛠 Component
+## 🛠 Component - Agreement
+
+### Agreement
+약관 동의 전체를 감싸는 컨테이너 컴포넌트입니다.
+
+### Agreement.Group
+드롭다운 형태의 약관 그룹 컴포넌트입니다.
+
+| Prop | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| `title` | `string \| ReactNode` | 그룹 제목 | - |
+| `isOpen` | `boolean` | 드롭다운 열림 여부 | `false` |
+| `onToggle` | `function` | 헤더 클릭 시 실행되는 콜백 | - |
+
+### Agreement.Row
+개별 약관 항목을 나타내는 컴포넌트입니다.
+
+| Prop | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| `isChecked` | `boolean` | 체크박스 선택 여부 | `false` |
+| `onCheck` | `function` | 체크박스 변경 시 실행되는 콜백 | - |
+| `onGoDetail` | `function` | 우측 화살표 클릭 시 실행되는 콜백 | - |
+
+### Agreement.Text
+약관 텍스트를 표시하는 컴포넌트입니다.
+
+### Agreement.CheckBox
+SVG 기반의 커스텀 체크박스 컴포넌트입니다. 
+
+### Agreement.RightArrow
+약관 상세 페이지 이동을 나타내는 화살표 아이콘 컴포넌트입니다.
+
+---
+
+## 🚀 사용 예시 (Agreement)
+
+
+
+```jsx
+import { Agreement } from 'smart-terms-ui'
+import { useState } from 'react'
+
+function App() {
+  const [open, setOpen] = useState(true)
+  const [checked, setChecked] = useState(false)
+
+  return (
+    <Agreement>
+      <Agreement.Group
+        title="필수 약관 동의"
+        isOpen={open}
+        onToggle={() => setOpen(prev => !prev)}
+      >
+        <Agreement.Row
+          isChecked={checked}
+          onCheck={() => setChecked(prev => !prev)}
+          onGoDetail={() => console.log('약관 상세 이동')}
+        >
+          <Agreement.Text variant="large" tone="main">
+            서비스 이용약관 동의 (필수)
+          </Agreement.Text>
+        </Agreement.Row>
+      </Agreement.Group>
+    </Agreement>
+  )
+}
+
+## 🛠 Component - Detail
 
 ### Detail
 
