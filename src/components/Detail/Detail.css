@@ -54,7 +54,7 @@
 
 /* 스크롤 뷰 높이 설정 (필수) */
 .st-detail__scroll-view {
-  height: 300px;
+  height: 80vh;
   overflow-y: auto;
   margin-bottom: 16px;
   padding-right: 8px;

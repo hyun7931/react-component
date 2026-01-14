@@ -1,5 +1,5 @@
 // src/components/Detail/Detail.jsx
-import React, { useState, useRef, useEffect} from 'react'
+import React, { useState, useRef } from 'react'
 import { Title, Subtitle, Body } from './Text'
 import { BadgeGroup, BadgeItem } from './AiBadgeText'
 import './Detail.css'
@@ -13,16 +13,13 @@ const Detail = ({ children, onConfirm }) => {
     const { scrollTop, scrollHeight, clientHeight } = scrollRef.current
 
     // 바닥에 도달했는지 확인 (오차 범위 5px로 넉넉하게)
-    if (scrollHeight - scrollTop <= clientHeight + 5 || scrollHeight <= clientHeight ) {
+    if (
+      scrollHeight - scrollTop <= clientHeight + 5 ||
+      scrollHeight <= clientHeight
+    ) {
       setIsBottom(true)
     }
   }
-
-
-  //데이터(children)가 로드되어 높이가 변할 때마다 스크롤 바닥 여부 체크
-  useEffect(() =>{
-    handleScroll()
-  }, [children])
 
   return (
     <div className='st-detail__container'>
