@@ -42,3 +42,16 @@
   -webkit-font-smoothing: antialiased;
   color: var(--st-text-main);
 }
+
+.agreement-card {
+  border: 1px solid #e0e0e0; 
+  border-radius: 12px;  
+  background-color: #ffffff;   
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+  overflow: hidden;    
+}
+
+
+.agreement-card .st-agreement-group-header {
+  border-bottom: 1px solid #f0f0f0; 
+}
