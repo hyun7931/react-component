@@ -1,6 +1,7 @@
 // src/components/Detail/Detail.jsx
 import React from 'react';
 import { Title, Subtitle, Body } from './Text';
+import { BadgeGroup, BadgeItem } from './AiBadgeText';
 import './Detail.css';
 
 // 1. 메인 컨테이너 컴포넌트
@@ -12,5 +13,7 @@ const Detail = ({ children }) => {
 Detail.Title = Title;
 Detail.Subtitle = Subtitle;
 Detail.Body = Body;
+Detail.BadgeGroup = BadgeGroup;
+Detail.BadgeItem = BadgeItem;
 
 export default Detail;

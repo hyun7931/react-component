@@ -1,5 +1,6 @@
 /* src/components/Detail/Detail.css */
 
+/* 텍스트 스타일 컴포넌트 */
 .st-text__title {
   font-size: var(--st-font-title);
   color: var(--st-text-main);
@@ -22,3 +23,35 @@
   line-height: 1.6;
   margin-bottom: 16px;
 }
+
+/* AI Badge 스타일 */
+.st-ai-badge-group {
+  background-color: var(--st-bg-gray);
+  border-radius: var(--st-radius-medium);
+  padding: 16px;
+  margin: 24px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.st-ai-badge-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.st-ai-badge-bullet {
+    min-width: 5px;
+    max-width: 5px;
+    height: 5px;
+    background-color: var(--st-text-muted);
+    border-radius: 50%;
+    margin-top: 9px;
+}
+
+.st-ai-badge-item .st-text__body {
+  margin-bottom: 0 !important; /*margin 제거*/
+}
+
+

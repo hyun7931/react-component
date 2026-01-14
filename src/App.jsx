@@ -17,6 +17,19 @@ function App() {
       <Detail.Body>
         이 약관에서 사용하는 용어의 정의는 다음과 같습니다...
       </Detail.Body>
+
+      <Detail.BadgeGroup>
+        <Detail.BadgeItem>
+          <Detail.Body>첫 번째 동글동글.</Detail.Body>
+        </Detail.BadgeItem>
+        <Detail.BadgeItem>
+          <Detail.Body>두 번째 동글동글.</Detail.Body>
+        </Detail.BadgeItem>
+        <Detail.BadgeItem>
+          <Detail.Body>세 번째 동글동글.</Detail.Body>
+        </Detail.BadgeItem>
+      </Detail.BadgeGroup>
+
     </Detail>
   );
 }
