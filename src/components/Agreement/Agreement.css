@@ -1,0 +1,33 @@
+/* src/components/Agreement/Agreement.css */
+
+/* 공통 텍스트 스타일 */
+.st-agreement-text {
+    user-select: none;
+    display: inline-block;
+    text-align: left;
+    transition: color 0.2s ease;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+/* 텍스트 Variant & Tone */
+.st-agreement-text.large { font-size: var(--st-font-caption); font-weight: 500; }
+.st-agreement-text.small { font-size: var(--st-font-tiny); font-weight: 300; }
+
+.st-agreement-text.muted { color: var(--st-text-muted); }
+.st-agreement-text.main { color: var(--st-text-main); }
+.st-agreement-text.primary { color: var(--st-primary); }
+
+/* 체크박스 컨테이너 */
+.st-checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* 체크박스 상태별 색상 */
+.st-checkbox-container.inactive { color: var(--st-text-muted); }
+.st-checkbox-container.hovered { color: var(--st-primary); }
+.st-checkbox-container.checked { color: var(--st-primary-hover); }
