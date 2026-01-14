@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter } from 'react-router-dom'; // 1. 지도(Router) 불러오기
+import { BrowserRouter } from 'react-router-dom';
 import Agreement from './components/Agreement/Agreement';
 
 function App() {
