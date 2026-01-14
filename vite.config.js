@@ -8,6 +8,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: [{ find: '@', replacement: '/src' }],
+  },
   build: {
     lib: {
       // 라이브러리가 시작되는 파일 위치
