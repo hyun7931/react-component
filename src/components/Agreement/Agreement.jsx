@@ -19,7 +19,7 @@ const Group = ({ title, children, isOpen, onToggle }) => {
         ) : (
           title
         )}
-        <div style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: '0.2s' }}>
+        <div style={{ transform: isOpen ? 'rotate(270deg)' : 'rotate(90deg)', transition: '0.2s' }}>
           <RightArrow />
         </div>
       </div>
