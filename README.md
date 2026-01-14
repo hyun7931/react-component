@@ -49,7 +49,6 @@ SVG 기반의 커스텀 체크박스 컴포넌트입니다.
 ### Agreement.RightArrow
 약관 상세 페이지 이동을 나타내는 화살표 아이콘 컴포넌트입니다.
 
----
 
 ## 🚀 사용 예시 (Agreement)
 
@@ -84,34 +83,33 @@ function App() {
   )
 }
 ```
+<div align="center">
+  <img src="image.png" width="400" />
+</div>
 
 ## 🛠 Component - Detail
 
 ### Detail
+약관 내용 전체를 감싸는 컨테이너 컴포넌트입니다.
 
 | Prop        | Type       | Description                   | Default |
 | ----------- | ---------- | ----------------------------- | ------- |
 | `onConfirm` | `function` | 확인 버튼 클릭 시 실행될 콜백 | -       |
 
 ### Detail.Title
-
-- 제목 컴포넌트
+제목 컴포넌트입니다.
 
 ### Detail.Subtitle
-
-- 소제목 컴포넌트
+소제목 컴포넌트입니다.
 
 ### Detail.Body
-
-- 내용 컴포넌트
+내용 컴포넌트입니다.
 
 ### Detail.BadgeGroup
-
-- 배지 아이템을 래핑하는 그룹
+요약 내용(BadgeItem)을 래핑하는 컨테이너 컴포넌트입니다.
 
 ### Detail.BadgeItem
-
-- 불렛 포인트로 텍스트를 표시하는 컴포넌트
+불렛 포인트로 요약 내용을 표시할 수 있는 텍스트 컴포넌트입니다.
 
 ## 🚀 사용 예시 (Detail)
 
@@ -139,18 +137,9 @@ function App() {
   )
 }
 ```
-- Example Preview
-<div align="center">
-  <img src="image.png" width="400" />
-</div>
-
 <div align="center">
   <img width="400" alt="image1"
        src="https://github.com/user-attachments/assets/131a836f-571f-4df4-b2fd-47c7e0108402" />
-</div>
-
-<div align="center">
-  <img src="image-1.png" width="400" />
 </div>
 
 ## 🎨 Customizing Theme
