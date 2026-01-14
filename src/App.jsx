@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import Agreement from './components/Agreement/Agreement';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
+      <div className="st-container" style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      minHeight: '100vh',
+      paddingTop: '50px' 
+      }}>
+      <h1>약관 동의 테스트</h1>
+        
+        <Agreement 
+          title={
+            <div style={{ display: 'flex', gap: '4px' }}>
+              <span style={{ color: 'var(--st-primary)' }}>[필수]</span>
+              <span>개인정보 수집 및 이용 동의</span>
+            </div>
+          }
+          isChecked={isChecked}
+          onCheck={() => setIsChecked(!isChecked)} // 체크박스 누르면 실행
+          onGoDetail={() => alert('상세보기 연결')} // 화살표 눌렀을 때 (추후 수정)
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
