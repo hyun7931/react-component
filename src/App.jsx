@@ -8,7 +8,8 @@ import { TERMS_DATA, AI_SUMMARY_DATA } from './assets/termsDummyData'
 function App() {
   const [isChecked, setIsChecked] = useState(false)
   const [showDetail, setShowDetail] = useState(false) // 약관으로 이동
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  
   return (
     <div className="st-container" style={{ padding: '50px 20px' }}>
 
@@ -16,6 +17,8 @@ function App() {
         <Agreement>
           <div className="agreement-card">
             <Agreement.Group
+              isOpen={isDropdownOpen}
+              onToggle={() => setIsDropdownOpen(!isDropdownOpen)}
               title={
                 <div style={{ display: 'flex', gap: '4px' }}>
                   <Agreement.Text tone="primary">[필수]</Agreement.Text>
@@ -45,6 +48,8 @@ function App() {
             setShowDetail(false);
             // 동시에 체크박스 체크 상태로 변경
             setIsChecked(true);
+            // 돌아와도 드롭다운 열려있음
+            setIsDropdownOpen(true);
           }}
         >
         {TERMS_DATA.map(term => {
