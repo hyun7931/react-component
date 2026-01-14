@@ -37,19 +37,19 @@
 }
 /* 비활성화 상태 (회색) */
 .st-detail__confirm-button--disabled {
-  background-color: grey;
+  background-color: var(--st-bg-dark-gray);
   color: white;
   cursor: not-allowed;
 }
 
 /* 활성화 상태 (파란색) */
 .st-detail__confirm-button--active {
-  background-color: blue;
+  background-color: var(--st-primary);
   color: white;
 }
 
 .st-detail__confirm-button--active:hover {
-  background-color: green;
+  background-color: var(--st-primary-hover);
 }
 
 /* 스크롤 뷰 높이 설정 (필수) */
@@ -72,18 +72,18 @@
 }
 
 .st-ai-badge-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .st-ai-badge-bullet {
-    min-width: 5px;
-    max-width: 5px;
-    height: 5px;
-    background-color: var(--st-text-muted);
-    border-radius: 50%;
-    margin-top: 9px;
+  min-width: 5px;
+  max-width: 5px;
+  height: 5px;
+  background-color: var(--st-text-muted);
+  border-radius: 50%;
+  margin-top: 9px;
 }
 
 .st-ai-badge-item .st-text__body {
