@@ -70,15 +70,18 @@ function App() {
 }
 ```
 - Example Preview
-<p align="center">
+<div align="center">
+  <img src="image.png" width="400" />
+</div>
+
+<div align="center">
   <img width="400" alt="image1"
        src="https://github.com/user-attachments/assets/131a836f-571f-4df4-b2fd-47c7e0108402" />
-  <img src="image.png" width="300" />
-  <img src="image-1.png" width="300" />
-</p>
+</div>
 
-![alt text](image.png)
-![alt text](image-1.png)
+<div align="center">
+  <img src="image-1.png" width="400" />
+</div>
 
 ## 🎨 Customizing Theme
 
