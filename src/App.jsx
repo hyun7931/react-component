@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Agreement from './components/Agreement/Agreement';
+import './App.css';
 
 function App() {
   const [isChecked, setIsChecked] = useState(false);

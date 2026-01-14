@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+:root{
+  --st-primary: #007bff;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

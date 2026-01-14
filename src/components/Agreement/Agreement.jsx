@@ -2,6 +2,7 @@ import { useState } from "react";
 import RightArrow from "./RightArrow"; 
 import CheckBox from "./CheckBox"; 
 import Text from "./Text"; 
+import './Agreement.css';
 
 const Agreement = ({ title, isChecked, onCheck, onGoDetail}) => {
   const [isOpen, setIsOpen] = useState(false);
