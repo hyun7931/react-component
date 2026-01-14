@@ -3,7 +3,7 @@ import RightArrow from "./RightArrow";
 import CheckBox from "./CheckBox"; 
 import Text from "./Text"; 
 
-const Agreement = ({ title, isChecked, onCheck }) => {
+const Agreement = ({ title, isChecked, onCheck, onGoDetail}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -57,7 +57,7 @@ const Agreement = ({ title, isChecked, onCheck }) => {
             {/* 상세 약관 이동 */}
           <RightArrow onClick={(e) => {
             e.stopPropagation();
-            navigate('/detail/1');
+            if (onGoDetail) onGoDetail()
           }} />
         </div>
       )}

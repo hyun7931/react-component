@@ -15,7 +15,12 @@ function App() {
       <h1>약관 동의 테스트</h1>
         
         <Agreement 
-          title="개인정보 수집 및 이용 동의" 
+          title={
+            <div style={{ display: 'flex', gap: '4px' }}>
+              <span style={{ color: 'var(--st-primary)' }}>[필수]</span>
+              <span>개인정보 수집 및 이용 동의</span>
+            </div>
+          }
           isChecked={isChecked}
           onCheck={() => setIsChecked(!isChecked)}
           onGoDetail={() => alert('상세보기 클릭!')} 
