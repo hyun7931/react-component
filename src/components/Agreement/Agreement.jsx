@@ -10,18 +10,18 @@ const Agreement = ({ children }) => {
 };
 
 // 드롭다운
-const Group = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Group = ({ title, children, isOpen, onToggle }) => {
   return (
     <>
-      <div className="st-agreement-header" onClick={() => setIsOpen(!isOpen)}>
+      <div className="st-agreement-header" onClick={onToggle}>
         {typeof title === "string" ? (
           <Text variant="large" tone="main">{title}</Text>
         ) : (
           title
         )}
-        <RightArrow />
+        <div style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: '0.2s' }}>
+          <RightArrow />
+        </div>
       </div>
 
       {isOpen && <div className="st-agreement-dropdown">{children}</div>}
