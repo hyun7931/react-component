@@ -41,25 +41,28 @@ function App() {
 
       {!showDetail && (
         <Agreement>
-          <Agreement.Group
-            title={
-              <div style={{ display: 'flex', gap: '4px' }}>
-                <Agreement.Text tone="primary">[필수]</Agreement.Text>
-                <Agreement.Text tone="main">개인정보 수집 및 이용 동의</Agreement.Text>
-              </div>
-            }
-          >
-            {/* 드롭다운 안에 들어갈 실제 체크 항목 */}
-            <Agreement.Row 
-              isChecked={isChecked} 
-              onCheck={() => setIsChecked(!isChecked)}
-              onGoDetail={() => setShowDetail(true)}
+          <div className="agreement-card">
+            <Agreement.Group
+              isOpen={isDropdownOpen}
+              onToggle={() => setIsDropdownOpen(!isDropdownOpen)}
+              title={
+                <div style={{ display: 'flex', gap: '4px' }}>
+                  <Agreement.Text tone="primary">[필수]</Agreement.Text>
+                  <Agreement.Text tone="main">개인정보 수집 및 이용 동의</Agreement.Text>
+                </div>
+              }
             >
-              <Agreement.Text variant="small" tone="muted">
-                개인정보 수집 및 이용 동의 (필수)
-              </Agreement.Text>
-            </Agreement.Row>
-          </Agreement.Group>
+              <Agreement.Row 
+                isChecked={isChecked} 
+                onCheck={() => setIsChecked(!isChecked)}
+                onGoDetail={() => setShowDetail(true)}
+              >
+                <Agreement.Text variant="small" tone="muted">
+                  개인정보 수집 및 이용 동의 (필수)
+                </Agreement.Text>
+              </Agreement.Row>
+            </Agreement.Group>
+          </div>
         </Agreement>
       )}
 
@@ -67,8 +70,12 @@ function App() {
         <Detail 
         onConfirm={
           () => {
+            // 상세 페이지 닫고 목록으로 돌아감
             setShowDetail(false);
+            // 동시에 체크박스 체크 상태로 변경
             setIsChecked(true);
+            // 돌아와도 드롭다운 열려있음
+            setIsDropdownOpen(true);
           }}
         >
         {TERMS_DATA.map(term => {
