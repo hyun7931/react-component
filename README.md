@@ -69,6 +69,11 @@ function App() {
   )
 }
 ```
+- Example Preview
+<p align="center">
+  <img width="400" alt="image1"
+       src="https://github.com/user-attachments/assets/131a836f-571f-4df4-b2fd-47c7e0108402" />
+</p>
 
 ![alt text](image.png)
 ![alt text](image-1.png)
