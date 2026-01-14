@@ -113,7 +113,7 @@ function App() {
 
 - 불렛 포인트로 텍스트를 표시하는 컴포넌트
 
-## 🚀 사용 예시
+## 🚀 사용 예시 (Detail)
 
 ```jsx
 import { Detail } from 'smart-terms-ui'
