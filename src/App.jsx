@@ -10,7 +10,7 @@ function App() {
   const [showDetail, setShowDetail] = useState(false) // 약관으로 이동
 
   // [추가] 드롭다운 열림/닫힘 상태 관리 (기본값 false: 닫힘, true: 열림)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   //ai summary state
   const [aiSummary, setAiSummary] = useState([])
