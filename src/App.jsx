@@ -1,19 +1,26 @@
-// src/App.jsx
-import { BrowserRouter } from 'react-router-dom';
+import { useState } from 'react';
 import Agreement from './components/Agreement/Agreement';
 
 function App() {
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
-    <BrowserRouter>
-      <div className="st-container">
-        <h1>약관 동의 테스트</h1>
+      <div className="st-container" style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      minHeight: '100vh',
+      paddingTop: '50px' 
+      }}>
+      <h1>약관 동의 테스트</h1>
         
         <Agreement 
-          title="[필수] 개인정보 수집 및 이용 동의" 
-          isChecked={false} 
+          title="개인정보 수집 및 이용 동의" 
+          isChecked={isChecked}
+          onCheck={() => setIsChecked(!isChecked)}
+          onGoDetail={() => alert('상세보기 클릭!')} 
         />
       </div>
-    </BrowserRouter>
   );
 }
 

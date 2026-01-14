@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import RightArrow from "./RightArrow"; 
 import CheckBox from "./CheckBox"; 
 import Text from "./Text"; 
 
 const Agreement = ({ title, isChecked, onCheck }) => {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
