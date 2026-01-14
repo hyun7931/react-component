@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { Title, Subtitle, Body } from './Text'
 import './Detail.css'
 
 const Detail = ({ children, onConfirm }) => {
@@ -38,5 +39,10 @@ const Detail = ({ children, onConfirm }) => {
     </div>
   )
 }
+
+// 2. 하위 컴포넌트들을 Detail 객체에 할당 (이것이 핵심 로직)
+Detail.Title = Title
+Detail.Subtitle = Subtitle
+Detail.Body = Body
 
 export default Detail
