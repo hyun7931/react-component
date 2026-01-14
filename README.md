@@ -73,6 +73,8 @@ function App() {
 <p align="center">
   <img width="400" alt="image1"
        src="https://github.com/user-attachments/assets/131a836f-571f-4df4-b2fd-47c7e0108402" />
+  <img src="image.png" width="300" />
+  <img src="image-1.png" width="300" />
 </p>
 
 ![alt text](image.png)
