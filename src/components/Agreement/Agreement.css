@@ -31,3 +31,59 @@
 .st-checkbox-container.inactive { color: var(--st-text-muted); }
 .st-checkbox-container.hovered { color: var(--st-primary); }
 .st-checkbox-container.checked { color: var(--st-primary-hover); }
+
+
+/* 우측 화살표 버튼 스타일 */
+.st-right-arrow {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--st-text-muted); /* 기본은 회색 */
+    transition: all 0.2s ease;
+    border-radius: 50%;
+}
+
+.st-right-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* 살짝 어두워지는 효과 */
+    color: var(--st-text-main); /* 호버 시 진해짐 */
+}
+
+.st-right-arrow svg {
+    display: block;
+}
+
+/* 배경 관련 */
+.st-agreement-container {
+  border-bottom: 1px solid var(--st-border-light);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.st-agreement-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--st-spacing-m);
+  background-color: var(--st-white);
+  cursor: pointer;
+}
+
+.st-agreement-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--st-spacing-m);
+  background-color: #f9f9f9; /* 드롭다운 배경 */
+  border-top: 1px solid #eee;
+}
+
+.st-agreement-flex-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
