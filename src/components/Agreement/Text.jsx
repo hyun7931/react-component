@@ -1,5 +1,4 @@
-import react from 'react';
-import './Agreement.css';
+import './Agreement.css'
 
 //사용 예시
 // variant = large | small , tone = main | muted | primary
@@ -7,11 +6,9 @@ import './Agreement.css';
 // <Text variant="small" tone="muted">Small - Muted (회색)</Text>
 
 const Text = ({ children, variant = 'large', tone = 'muted' }) => {
-    return (
-        <span className={`st-agreement-text ${variant} ${tone}`}>
-            {children}
-        </span>
-    );
-};
+  return (
+    <span className={`st-agreement-text ${variant} ${tone}`}>{children}</span>
+  )
+}
 
-export default Text;
+export default Text
