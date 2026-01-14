@@ -12,12 +12,18 @@ const Agreement = ({ children }) => {
 // 드롭다운
 const Group = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className="st-agreement-header" onClick={() => setIsOpen(!isOpen)}>
-        <Text variant="large" tone="main">{title || "약관 전체동의"}</Text>
+        {typeof title === "string" ? (
+          <Text variant="large" tone="main">{title}</Text>
+        ) : (
+          title
+        )}
         <RightArrow />
       </div>
+
       {isOpen && <div className="st-agreement-dropdown">{children}</div>}
     </>
   );
@@ -29,10 +35,9 @@ const Row = ({ isChecked, onCheck, onGoDetail, children }) => {
     <div className="st-agreement-content">
       <div className="st-agreement-flex-group">
         <CheckBox checked={isChecked} onChange={onCheck} />
-        <Text variant="small" tone="muted">
-          {children}
-        </Text>
+        {children}
       </div>
+
       <RightArrow
         onClick={(e) => {
           e.stopPropagation();
