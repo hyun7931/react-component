@@ -22,8 +22,8 @@ function App() {
             </div>
           }
           isChecked={isChecked}
-          onCheck={() => setIsChecked(!isChecked)}
-          onGoDetail={() => alert('상세보기 클릭!')} 
+          onCheck={() => setIsChecked(!isChecked)} // 체크박스 누르면 실행
+          onGoDetail={() => alert('상세보기 연결')} // 화살표 눌렀을 때 (추후 수정)
         />
       </div>
   );
