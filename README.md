@@ -83,6 +83,7 @@ function App() {
     </Agreement>
   )
 }
+```
 
 ## 🛠 Component - Detail
 
