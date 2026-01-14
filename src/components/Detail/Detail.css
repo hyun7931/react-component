@@ -1,0 +1,61 @@
+/* 스크롤이 발생하는 핵심 영역 */
+.st-detail__scroll-view {
+  height: 300px; /* ⚠️ 높이가 고정되어 있어야 스크롤이 생깁니다 */
+  overflow-y: auto; /* 내용이 넘치면 스크롤바 생성 */
+  padding: 16px;
+  background-color: var(--st-bg-gray);
+  border-radius: var(--st-radius-medium);
+  margin-bottom: 20px;
+}
+
+/* 안내 문구 스타일 */
+.st-detail__scroll-guide {
+  padding: 18px;
+  text-align: center;
+  color: var(--st-text-muted);
+  background-color: var(--st-border-light);
+  border-radius: var(--st-radius-medium);
+  font-size: var(--st-font-caption);
+}
+
+/* 버튼 스타일 */
+.st-detail__confirm-button--active {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--st-primary);
+  color: black;
+  border-radius: var(--st-radius-medium);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 기본 버튼 스타일 */
+.st-detail__confirm-button {
+  width: 100%;
+  padding: 18px;
+  color: black;
+  background-color: aliceblue;
+  border: none;
+  border-radius: var(--st-radius-medium);
+  font-size: var(--st-font-body);
+  font-weight: 600;
+  transition: all 0.3s ease; /* 색상 변경 애니메이션 */
+  cursor: pointer;
+}
+
+/* 비활성화 상태 (회색) */
+.st-detail__confirm-button--disabled {
+  background-color: var(--st-border-light);
+  color: var(--st-text-muted);
+  cursor: not-allowed;
+}
+
+/* 활성화 상태 (파란색) */
+.st-detail__confirm-button--active {
+  background-color: blue;
+  color: white;
+}
+
+.st-detail__confirm-button--active:hover {
+  background-color: green;
+}

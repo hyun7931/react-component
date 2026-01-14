@@ -1,33 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Detail from './components/Detail/Detail'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
+      <Detail onConfirm={() => alert('확인되었습니다.')}>
+        <h2 className='st-detail__title'>문서 제목</h2>
+        <div className='st-detail__content'>
+          {[...Array(20)].map((_, index) => (
+            <p key={index}>
+              이것은 예시 문서 내용입니다. 스크롤을 내려서 마지막까지
+              읽어주세요.
+            </p>
+          ))}
+        </div>
+      </Detail>
     </>
   )
 }
