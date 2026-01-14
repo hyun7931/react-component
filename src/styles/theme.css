@@ -1,0 +1,43 @@
+/* 1. 폰트 불러오기 (Pretendard) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* 2. 테마 변수 설정 */
+:root {
+  /* Colors */
+  --st-primary: #3182f6;
+  --st-primary-hover: #1b64da;
+  --st-primary-light: #e8f3ff;
+
+  --st-text-main: #191f28;
+  --st-text-sub: #4e5968;
+  --st-text-muted: #8b95a1;
+
+  --st-bg-gray: #f9fafb;
+  --st-border-light: #f2f4f6;
+  --st-white: #ffffff;
+
+  /* Font Sizes */
+  --st-font-title: 20px;
+  --st-font-body: 16px;
+  --st-font-caption: 14px;
+  --st-font-tiny: 12px;
+
+  /* Spacing & Radius */
+  --st-radius-large: 20px;
+  --st-radius-medium: 12px;
+  --st-spacing-m: 16px;
+  --st-spacing-l: 24px;
+}
+
+/* 3. 기본 폰트 적용 */
+.st-container {
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--st-text-main);
+}
