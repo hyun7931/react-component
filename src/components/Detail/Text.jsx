@@ -1,6 +1,6 @@
-// src/components/Text/SubComponents.jsx
+// src/components/Detail/Text.jsx
 import React from 'react'
-import './Text.css'
+import './Detail.css'
 
 export const Title = ({ children, className = '' }) => (
   <h2 className={`st-text__title ${className}`}>{children}</h2>
