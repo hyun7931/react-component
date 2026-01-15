@@ -29,7 +29,7 @@ npm install smart-terms-ui
 | :--- | :--- | :--- | :--- |
 | `title` | `string \| ReactNode` | 그룹 제목 | - |
 | `isOpen` | `boolean` | 드롭다운 열림 여부 | `false` |
-| `onToggle` | `function` | 헤더 클릭 시 실행되는 콜백 | - |
+| `onToggle` | `function` | 화살표 클릭 시 실행되는 콜백 | - |
 
 ### Agreement.Row
 개별 약관 항목을 나타내는 컴포넌트입니다.
